@@ -2,7 +2,7 @@ version: '2'
 
 services:
   tor:
-    image: domistyle/tor-browser
+    image: joeaa17/tor-frame
     restart: always
     ports:
       - 5800:5800
