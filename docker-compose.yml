@@ -2,16 +2,16 @@ version: '2'
 
 services:
   tor:
-    image: joeaa17/tor-frame
+    image: domistyle/tor-browser
     restart: always
     ports:
       - 5800:5800
       - 5900:5900
     environment:
-      - DISPLAY_WIDTH: 1920
-      - DISPLAY_HEIGHT: 1080
-      - KEEP_APP_RUNNING: 1
-      - SECURE_CONNECTION: 1
-      - TZ: Europe/Vienna
+      DISPLAY_WIDTH: 1920
+      DISPLAY_HEIGHT: 1080
+      KEEP_APP_RUNNING: 1
+      VNC_PASSWORD: 123
+      TZ: Europe/Vienna
     volumes:
       - /srv/tor:/app/Browser/TorBrowser/Data/Tor
